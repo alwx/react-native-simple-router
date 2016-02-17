@@ -147,7 +147,7 @@ class NavBarContent extends React.Component {
 
     if (Platform.OS === 'ios' || this.props.route.leftCorner || this.props.route.index > 0) {
       leftCorner = (
-        <View style={[styles.corner, styles.alignLeft]}>
+        <View style={[styles.corner, styles.alignLeft, this.props.route.leftCornerStyle]}>
           {leftCornerContent}
         </View>
       );
@@ -171,7 +171,7 @@ class NavBarContent extends React.Component {
 
     if (Platform.OS === 'ios' || this.props.route.rightCorner || this.props.rightCorner) {
       rightCorner = (
-        <View style={[styles.corner, styles.alignRight]}>
+        <View style={[styles.corner, styles.alignRight, this.props.route.rightCornerStyle]}>
           {rightCornerContent}
         </View>
       );
