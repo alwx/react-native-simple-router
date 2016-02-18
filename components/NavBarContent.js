@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   corner: {
-    flex: 1,
+    flex: 0,
     justifyContent: 'center',
   },
 
@@ -147,7 +147,7 @@ class NavBarContent extends React.Component {
 
     if (Platform.OS === 'ios' || this.props.route.leftCorner || this.props.route.index > 0) {
       leftCorner = (
-        <View style={[styles.corner, styles.alignLeft, this.props.route.leftCornerStyle]}>
+        <View style={[styles.corner, styles.alignLeft]}>
           {leftCornerContent}
         </View>
       );
@@ -171,7 +171,7 @@ class NavBarContent extends React.Component {
 
     if (Platform.OS === 'ios' || this.props.route.rightCorner || this.props.rightCorner) {
       rightCorner = (
-        <View style={[styles.corner, styles.alignRight, this.props.route.rightCornerStyle]}>
+        <View style={[styles.corner, styles.alignRight]}>
           {rightCornerContent}
         </View>
       );

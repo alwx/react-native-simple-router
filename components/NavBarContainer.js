@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: Styles.NAV_BAR_HEIGHT,
+    elevation: 4,
   },
   navbarContainerHidden: {
     position: 'absolute',
