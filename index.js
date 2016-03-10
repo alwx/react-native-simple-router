@@ -1,7 +1,6 @@
 import React, {
   StyleSheet,
   Navigator,
-  StatusBarIOS,
   StatusBar,
   View,
   Platform,
@@ -298,9 +297,9 @@ class Router extends React.Component {
     // Status bar color
     if (Platform.OS === 'ios') {
       if (this.props.statusBarColor === 'black') {
-        StatusBarIOS.setStyle(0); // "Default" style according to StatusBarIOS.js
+        StatusBar.setBarStyle(0); // "Default" style according to StatusBarIOS.js
       } else {
-        StatusBarIOS.setStyle(1); // "light-content" style according to StatusBarIOS.js
+        StatusBar.setBarStyle(1); // "light-content" style according to StatusBarIOS.js
       }
     } else if (Platform.OS === 'android') {
       // no android version yet
